@@ -393,19 +393,25 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:600;color:var(--gold)}
 
 @media(max-width:720px){
   .iz{padding:8px 0 14px;}
-  .iz-line{left:32px;transform:none;}
-  .iz-glow{left:32px;transform:translateX(-50%);}
   .iz-row{
-    grid-template-columns:64px 1fr;
-    gap:18px;
-    padding:18px 0;
-    text-align:left;
+    grid-template-columns:1fr 56px 1fr;
+    gap:8px;
+    padding:14px 0;
   }
-  .iz-side--left{order:2;text-align:left;padding-right:0;}
-  .iz-side--right{order:2;text-align:left;padding-left:0;}
-  .iz-side--empty{display:none;}
-  .iz-icon{order:1;width:64px;height:64px;justify-self:start;}
-  .iz-desc{max-width:none;display:block;}
+  .iz-side--left{padding-right:6px;}
+  .iz-side--right{padding-left:6px;}
+  .iz-icon{width:52px;height:52px;}
+  .iz-icon svg{width:60%;height:60%;}
+  .iz-time{font-size:clamp(20px,5.4vw,28px);margin-bottom:5px;}
+  .iz-title{font-size:clamp(13px,3.6vw,16px);margin-bottom:4px;line-height:1.25;}
+  .iz-desc{font-size:clamp(11px,3vw,13px);line-height:1.4;max-width:none;}
+}
+@media(max-width:380px){
+  .iz-row{grid-template-columns:1fr 44px 1fr;gap:4px;}
+  .iz-icon{width:42px;height:42px;}
+  .iz-time{font-size:18px;}
+  .iz-title{font-size:12px;letter-spacing:.2px;}
+  .iz-desc{font-size:10.5px;}
 }
 
 /* ============ KIDS POLICY (NO NIÑOS) ============ */
