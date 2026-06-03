@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Rogelio & Yesenia · 26 de Septiembre 2026 · Lagos de Moreno</title>
-<meta name="description" content="Rogelio & Yesenia · Nuestra Boda · Sábado, 26 de Septiembre de 2026 · Lagos de Moreno, Jalisco">
+<title>Yesenia & Rogelio · 26 de Septiembre 2026 · Lagos de Moreno</title>
+<meta name="description" content="Yesenia & Rogelio · Nuestra Boda · Sábado, 26 de Septiembre de 2026 · Lagos de Moreno, Jalisco">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Rogelio & Yesenia · 26 de Septiembre 2026">
+<meta property="og:title" content="Yesenia & Rogelio · 26 de Septiembre 2026">
 <meta property="og:description" content="Nuestra Boda · Sábado, 26 de Septiembre de 2026 · Lagos de Moreno, Jalisco">
 <meta property="og:image" content="./og-image.jpg">
 <meta property="og:locale" content="es_MX">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rogelio & Yesenia · 26 de Septiembre 2026">
+<meta name="twitter:title" content="Yesenia & Rogelio · 26 de Septiembre 2026">
 <meta name="twitter:image" content="./og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,6 +110,37 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:600;color:var(--gold)}
 }
 /* hero-bg-wrap, hero-bg y hero-bg-overlay eliminados: viñeta oscura quitada por petición del cliente */
 /* hero-frame eliminado: la viñeta dorada se quitó por petición del cliente */
+
+/* ============ DIVIDER ENVELOPE ============ */
+.divider-env{
+  position:relative;text-align:center;
+  padding:clamp(40px,7vw,72px) 0;
+  overflow:hidden;
+  background:var(--surface);
+}
+.divider-env::before{
+  content:"";position:absolute;left:0;right:0;top:0;height:80px;
+  background:linear-gradient(to bottom,var(--surface),transparent);
+  z-index:2;pointer-events:none;
+}
+.divider-env::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:80px;
+  background:linear-gradient(to top,var(--surface),transparent);
+  z-index:2;pointer-events:none;
+}
+.divider-env-img{
+  display:block;
+  width:min(320px,72vw);
+  height:auto;
+  margin:0 auto;
+  border-radius:4px;
+  box-shadow:
+    0 8px 32px rgba(122,91,110,.18),
+    0 2px 8px rgba(122,91,110,.10),
+    0 0 0 1px rgba(201,160,68,.12);
+  position:relative;z-index:1;
+  filter:drop-shadow(0 2px 12px rgba(122,91,110,.15));
+}
 .hero-content{position:relative;z-index:1;text-align:center;color:var(--accent-deep);padding:40px 32px;max-width:960px;}
 .hero-ornament-top{display:block;margin:0 auto 28px;width:180px;height:auto;opacity:.9}
 .hero-eyebrow{
@@ -146,7 +177,7 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:600;color:var(--gold)}
 .hero-date .sep{color:var(--gold-deep);font-size:.6em;letter-spacing:0}
 .hero-place{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.45em;color:var(--ink-soft);margin-top:28px;padding-left:.45em;text-transform:uppercase;text-shadow:0 1px 8px rgba(255,255,255,.4);}
 .hero-scroll{
-  position:absolute;bottom:56px;left:50%;transform:translateX(-50%);
+  position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
   font-family:var(--sans);font-size:11px;letter-spacing:.5em;font-weight:600;
   color:var(--ink-soft);text-transform:uppercase;padding-left:.5em;
   display:flex;flex-direction:column;align-items:center;gap:12px;z-index:2;
@@ -660,9 +691,9 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
       </svg>
       <div class="hero-eyebrow" data-anim="hero-eyebrow">Reserva la fecha</div>
       <h1 class="hero-name">
-        <span class="hero-name-p" data-split="Rogelio"></span>
+        <span class="hero-name-p" data-split="Yesenia"></span>
         <span class="hero-and">&amp;</span>
-        <span class="hero-name-l" data-split="Yesenia"></span>
+        <span class="hero-name-l" data-split="Rogelio"></span>
       </h1>
       <div class="hero-date" data-anim="hero-date">
         <span>26</span><span class="sep">·</span><span>Septiembre</span><span class="sep">·</span><span>2026</span>
@@ -672,7 +703,10 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
     <div class="hero-scroll">Descubre</div>
   </section>
 
-  <div class="seam" style="--from:var(--surface);--to:var(--surface);height:24px" aria-hidden="true"></div>
+  <!-- IMAGEN DECORATIVA (sobre con sello) -->
+  <div class="divider-env">
+    <img class="divider-env-img" src="./divider-envelope.jpg" alt="" role="presentation" loading="lazy">
+  </div>
 
   <!-- FRASE INICIAL -->
   <section class="section-surface versiculo">
@@ -689,7 +723,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
           </g>
         </svg>
         <span class="verse-quote">&ldquo;</span>
-        <p class="verse-text">Hoy comenzamos una nueva historia, escrita con amor, confianza y sueños compartidos. Queremos que seas parte de este capítulo tan especial de nuestras vidas.</p>
+        <p class="verse-text">Comenzamos una nueva historia, escrita con amor, confianza y sueños compartidos. Queremos que seas parte de este capítulo tan especial de nuestras vidas.</p>
       </div>
     </div>
   </section>
@@ -726,11 +760,11 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
       <div class="familia-grid">
         <div class="familia-card" data-tilt>
           <div class="familia-role">Padres del novio</div>
-          <div class="familia-names">Rubén Pérez Macías<br>&amp; María Estela Delgadillo Alba</div>
+          <div class="familia-names">María Estela Delgadillo Alba<br>&amp; Rubén Pérez Macías</div>
         </div>
         <div class="familia-card" data-tilt>
           <div class="familia-role">Padres de la novia</div>
-          <div class="familia-names">José Ventura Díaz González<br>&amp; Ma. Leonor Mena Ortiz</div>
+          <div class="familia-names">M. Leonor Mena Ortiz<br>&amp; José Ventura Díaz González</div>
         </div>
       </div>
     </div>
@@ -747,18 +781,6 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
         <div class="padrino-card">
           <div class="padrino-icon">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <div class="padrino-tipo">Padrino</div>
-          <div class="padrino-names">Gerardo Alejandro<br>Jiménez de Anda</div>
-        </div>
-        <div class="padrino-card">
-          <div class="padrino-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a3 3 0 0 0-3 3c0 1.1.6 2.1 1.5 2.6"/>
               <path d="M12 2a3 3 0 0 1 3 3c0 1.1-.6 2.1-1.5 2.6"/>
               <path d="M9 8.6C6.7 9.4 5 11.5 5 14v2h14v-2c0-2.5-1.7-4.6-4-5.4"/>
@@ -768,6 +790,18 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
           </div>
           <div class="padrino-tipo">Madrina</div>
           <div class="padrino-names">Estela Pérez<br>Delgadillo</div>
+        </div>
+        <div class="padrino-card">
+          <div class="padrino-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="padrino-tipo">Padrino</div>
+          <div class="padrino-names">Gerardo Alejandro<br>Jiménez de Anda</div>
         </div>
       </div>
     </div>
@@ -962,6 +996,26 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
           </div>
         </div>
 
+        <!-- 5:00 PM Cóctel -->
+        <div class="iz-row">
+          <div class="iz-side iz-side--left">
+            <div class="iz-time">5:00 PM</div>
+            <div class="iz-title">Cóctel</div>
+            <div class="iz-desc">Disfruta de una refrescante bebida.</div>
+          </div>
+          <div class="iz-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 8 L24 24 L34 8 Z" opacity=".5"/>
+              <path d="M14 8 L34 8"/>
+              <line x1="24" y1="24" x2="24" y2="40"/>
+              <line x1="16" y1="40" x2="32" y2="40"/>
+              <circle cx="31" cy="14" r="5"/>
+              <path d="M28 14 Q31 11 34 14"/>
+            </svg>
+          </div>
+          <div class="iz-side iz-side--right iz-side--empty"></div>
+        </div>
+
         <!-- 5:30 PM Baile -->
         <div class="iz-row">
           <div class="iz-side iz-side--left">
@@ -1007,10 +1061,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
   <!-- DRESS CODE -->
   <section class="section-bg dress">
     <div class="container">
-      <div class="eyebrow">Código de vestimenta</div>
-      <h2>Formal</h2>
-      <div class="dress-sub">para nuestra celebración</div>
-      <div class="dress-note">Mujeres · vestido largo &nbsp;·&nbsp; Hombres · formal</div>
+      <h2>Código de <em>Vestimenta</em></h2>
 
       <div class="dc-figures">
         <div class="dc-fig">
@@ -1058,7 +1109,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
             <line x1="62" y1="56" x2="59" y2="48" stroke="#c9a044" stroke-width=".5" opacity=".6"/>
           </svg>
           <div class="dc-fig-name">Caballero</div>
-          <div class="dc-fig-hint">Traje formal<br>Zapato cerrado</div>
+          <div class="dc-fig-hint">Formal</div>
         </div>
 
         <div class="dc-divider" aria-hidden="true"></div>
@@ -1134,18 +1185,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
             <path d="M6 232 Q12 226 18 232 Q24 226 30 232 Q36 226 42 232 Q48 226 55 232 Q62 226 68 232 Q74 226 80 232 Q86 226 92 232 Q98 226 104 232" stroke="#7a5b6e" stroke-width=".7" opacity=".75" fill="none"/>
           </svg>
           <div class="dc-fig-name">Dama</div>
-          <div class="dc-fig-hint">Vestido largo<br>Sin color blanco</div>
-        </div>
-      </div>
-
-      <!-- Color sugerido -->
-      <div class="dress-section">
-        <div class="swatch-group-title">Color sugerido</div>
-        <div class="dress-swatches">
-          <div class="swatch">
-            <div class="swatch-c" style="background:#D4C5B2"></div>
-            <div class="swatch-n">Beige cálido</div>
-          </div>
+          <div class="dc-fig-hint">Vestido</div>
         </div>
       </div>
 
@@ -1158,50 +1198,6 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
         <div class="avoid-note">El blanco está reservado para la novia</div>
       </div>
 
-    </div>
-  </section>
-
-  <div class="seam" style="--from:var(--bg);--to:var(--surface)" aria-hidden="true"></div>
-
-  <!-- KIDS POLICY (NO NIÑOS) -->
-  <section class="section-surface kids">
-    <div class="container">
-      <div class="kids-card">
-        <svg class="kids-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="32" cy="20" r="8"/>
-          <path d="M16 56 Q16 36 32 36 Q48 36 48 56"/>
-          <path d="M20 12 L44 36" opacity=".55"/>
-        </svg>
-        <div class="eyebrow">Aviso especial</div>
-        <h2>Solo <em>adultos</em></h2>
-        <p>Con todo el cariño, hemos planeado una celebración pensada exclusivamente para adultos. Agradecemos tu comprensión y la oportunidad de disfrutar juntos esta noche tan especial.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="seam" style="--from:var(--surface);--to:var(--bg)" aria-hidden="true"></div>
-
-  <!-- MESA DE REGALOS -->
-  <section class="section-bg">
-    <div class="container">
-      <div class="gifts-head">
-        <div class="eyebrow">Tu presencia es nuestro regalo</div>
-        <h2>Mesa de <em>regalos</em></h2>
-        <p class="gifts-sub">Si deseas obsequiarnos algo, hemos preparado opciones para ti. Lo más importante es que nos acompañes en este día.</p>
-      </div>
-      <div class="gift-card">
-        <div class="gift-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 12 20 22 4 22 4 12"/>
-            <rect x="2" y="7" width="20" height="5"/>
-            <line x1="12" y1="22" x2="12" y2="7"/>
-            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
-            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
-          </svg>
-        </div>
-        <div class="gift-name">Próximamente</div>
-        <div class="gift-desc">Estamos preparando los detalles de nuestra mesa de regalos.<br>Pronto compartiremos las opciones contigo.</div>
-      </div>
     </div>
   </section>
 
@@ -1250,7 +1246,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
 
           <div class="eyebrow">Confirmación de asistencia</div>
           <h2 class="rsvp-title">Tu presencia <em>significa</em> todo</h2>
-          <p class="rsvp-text">Eres muy importante para nosotros, hemos reservado lugares en tu honor. Entendemos si no puedes acompañarnos, pero sí requerimos tu confirmación antes del <strong>29 de Agosto de 2026</strong>.</p>
+          <p class="rsvp-text">Eres muy importante para nosotros, hemos reservado lugares en tu honor. Entendemos si no puedes acompañarnos, pero sí requerimos tu confirmación antes del <strong>22 de Julio de 2026</strong>.</p>
 
           <div class="rsvp-divider">
             <svg class="rsvp-divider-heart" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
@@ -1262,7 +1258,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
 
           <div class="rsvp-deadline">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg>
-            Fecha límite · 29 de Agosto de 2026
+            Fecha límite · 22 de Julio de 2026
           </div>
         </div>
       </div>
@@ -1280,8 +1276,8 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
           <path d="M128 38 Q130 43 132 38" opacity=".7"/>
         </g>
       </svg>
-      <div class="footer-names">Rogelio <span class="amp">&amp;</span> Yesenia</div>
-      <div class="footer-date">26 · Septiembre · 2026 · Lagos de Moreno, Jalisco</div>
+      <div class="footer-names">Yesenia <span class="amp">&amp;</span> Rogelio</div>
+      <div class="footer-date">26 · Septiembre · 2026 · Lagos de Moreno, Jal.</div>
       <div class="footer-credit">
         <span>Invitación diseñada por &nbsp;</span>
         <a href="https://www.instagram.com/elysium.invitaciones/" target="_blank" rel="noopener">
@@ -1435,7 +1431,7 @@ if(document.querySelector('.verse-text')){
   gsap.fromTo('.verse-quote',{opacity:0,scale:.5,rotate:-10},{opacity:.8,scale:1,rotate:0,duration:1.3,ease:'back.out(1.4)',scrollTrigger:{trigger:'.verse-wrap',start:'top 80%'}});
   gsap.fromTo(verseWords,{opacity:0,y:24},{opacity:1,y:0,duration:.9,stagger:.05,ease:'power3.out',scrollTrigger:{trigger:'.verse-text',start:'top 82%'}});
   gsap.fromTo('.verse-ref',{opacity:0,y:10},{opacity:1,y:0,duration:.8,scrollTrigger:{trigger:'.verse-ref',start:'top 88%'}});
-  gsap.fromTo('.verse-sig',{opacity:0,y:20,scaleX:.6},{opacity:1,y:0,scaleX:1,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:'.verse-sig',start:'top 88%'}});
+  gsap.fromTo('.divider-env-img',{opacity:0,scale:.92,y:20},{opacity:1,scale:1,y:0,duration:1.3,ease:'power3.out',scrollTrigger:{trigger:'.divider-env',start:'top 80%'}});
 }
 
 // ------ DATE HERO ------
