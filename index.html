@@ -130,16 +130,14 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:600;color:var(--gold)}
 }
 .divider-env-img{
   display:block;
-  width:min(320px,72vw);
+  width:min(480px,90vw);
   height:auto;
   margin:0 auto;
-  border-radius:4px;
+  border-radius:8px;
   box-shadow:
-    0 8px 32px rgba(122,91,110,.18),
-    0 2px 8px rgba(122,91,110,.10),
-    0 0 0 1px rgba(201,160,68,.12);
+    0 12px 48px rgba(122,91,110,.22),
+    0 3px 12px rgba(122,91,110,.12);
   position:relative;z-index:1;
-  filter:drop-shadow(0 2px 12px rgba(122,91,110,.15));
 }
 .hero-content{position:relative;z-index:1;text-align:center;color:var(--accent-deep);padding:40px 32px;max-width:960px;}
 .hero-ornament-top{display:block;margin:0 auto 28px;width:180px;height:auto;opacity:.9}
@@ -1018,11 +1016,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
 
         <!-- 5:30 PM Baile -->
         <div class="iz-row">
-          <div class="iz-side iz-side--left">
-            <div class="iz-time">5:30 PM</div>
-            <div class="iz-title">Todos a bailar</div>
-            <div class="iz-desc">La pista no se detiene hasta el final.</div>
-          </div>
+          <div class="iz-side iz-side--left iz-side--empty"></div>
           <div class="iz-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 30 L16 12 L34 8 L34 26"/>
@@ -1031,12 +1025,20 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
               <path d="M16 18 L34 14"/>
             </svg>
           </div>
-          <div class="iz-side iz-side--right iz-side--empty"></div>
+          <div class="iz-side iz-side--right">
+            <div class="iz-time">5:30 PM</div>
+            <div class="iz-title">Todos a bailar</div>
+            <div class="iz-desc">La pista no se detiene hasta el final.</div>
+          </div>
         </div>
 
         <!-- 10:30 PM Fin -->
         <div class="iz-row">
-          <div class="iz-side iz-side--left iz-side--empty"></div>
+          <div class="iz-side iz-side--left">
+            <div class="iz-time">10:30 PM</div>
+            <div class="iz-title">Fin del evento</div>
+            <div class="iz-desc">Hasta la próxima celebración.</div>
+          </div>
           <div class="iz-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M34 28 A 14 14 0 1 1 20 14 A 11 11 0 0 0 34 28 Z"/>
@@ -1046,11 +1048,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
               <circle cx="9" cy="24" r="1" fill="currentColor"/>
             </svg>
           </div>
-          <div class="iz-side iz-side--right">
-            <div class="iz-time">10:30 PM</div>
-            <div class="iz-title">Fin del evento</div>
-            <div class="iz-desc">Hasta la próxima celebración.</div>
-          </div>
+          <div class="iz-side iz-side--right iz-side--empty"></div>
         </div>
       </div>
     </div>
